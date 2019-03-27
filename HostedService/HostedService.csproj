@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Data\AnotherTask.txt" />
+    <None Remove="Data\TimeTask.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\AnotherTask.txt" />
+    <Content Include="Data\TimeTask.txt" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="JsonFlatFileDataStore" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="NCrontab" Version="3.3.1" />
+  </ItemGroup>
+
+</Project>
